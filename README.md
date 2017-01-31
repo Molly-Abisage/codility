@@ -36,3 +36,27 @@ class Solution {
         return -1;
     }
 }
+
+TapeEqullibrium (83%) https://codility.com/demo/results/trainingPNNFJ4-B3Y/
+
+import java.util.*;
+class Solution {
+    
+    public int solution(int[] A) {
+        
+        int right = 0;
+        int left = 0;
+        int[] num = new int[A.length];
+        
+        for (int i = 0; i < A.length; i ++) {
+            right += A[i];
+        }
+        for (int i = 0; i < A.length; i ++) {
+            right -= A[i];
+            left += A[i];
+            num[i] = Math.abs(right - left);
+        }
+        Arrays.sort(num);
+        return num[0];
+    }
+}
