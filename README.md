@@ -92,7 +92,9 @@ class Solution {
 }
 ```
 PermCheck
-Check whether array A is a permutation. https://codility.com/demo/results/trainingNGSJA5-DCD/
+
+
+Check whether array A is a permutation (100%). https://codility.com/demo/results/trainingNGSJA5-DCD/
 
 ```java
 import java.util.*;
