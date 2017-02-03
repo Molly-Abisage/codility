@@ -91,3 +91,25 @@ class Solution {
     }
 }
 ```
+PermCheck
+Check whether array A is a permutation.
+
+```java
+import java.util.*;
+class Solution {
+    public int solution(int[] A) {
+        
+        Hashtable<Integer, Boolean> table = new Hashtable<>();
+        
+        for (int i = 0; i < A.length; i ++) {
+           
+            if (table.containsKey(A[i]) || A[i] > A.length) {
+                return 0; // is not a perm since A[i] exists more than once
+            } else {
+                table.put(A[i], true);
+            }
+        }
+        return 1;
+    }
+}
+```
