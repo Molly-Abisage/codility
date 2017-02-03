@@ -66,6 +66,7 @@ MissingInteger
 Find the minimal positive integer not occurring in a given sequence.
 https://codility.com/demo/results/training25FBE5-M36/ Passed with 44%
 
+```java
 import java.util.*;
 
 class Solution {
@@ -89,3 +90,4 @@ class Solution {
         return ints.get(ints.size() - 1) + 1;
     }
 }
+```
