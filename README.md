@@ -2,7 +2,7 @@
 My solutions to codility.com problems
 
 Equillibrium index (Got 58%) https://codility.com/demo/results/demoU43H7Y-2Z4/
-
+```java
 class Solution {
     
     public int solution(int[] A) {
@@ -36,9 +36,9 @@ class Solution {
         return -1;
     }
 }
-
+```
 TapeEqullibrium (83%) https://codility.com/demo/results/trainingPNNFJ4-B3Y/
-
+```java
 import java.util.*;
 class Solution {
     
@@ -60,7 +60,7 @@ class Solution {
         return num[0];
     }
 }
-
+```
 MissingInteger
 
 Find the minimal positive integer not occurring in a given sequence.
