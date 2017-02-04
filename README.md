@@ -118,11 +118,8 @@ class Solution {
 MissingInteger (100% score)
 Find the minimal positive integer not occurring in a given sequence.
 ```java
-class Solution {
+public class Solution {
     public int solution(int[] A) {
-        // write your code in Java SE 8
-        
-        
         int positiveCount = 0;        
         for(int i=0; i< A.length; i++) {
             positiveCount++;
