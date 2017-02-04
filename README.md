@@ -157,3 +157,26 @@ class Solution {
     }
 }
 ```
+PassingCars
+Count the number of passing cars on the road.
+https://codility.com/demo/results/trainingQBRC5T-UWU/ (57%)
+``java
+class Solution {
+    
+    public int solution(int[] A) {
+        
+        int passing = 0;
+        int zerosBefore = 0;
+        
+        for (int i = 0; i < A.length; i ++) {
+            
+            if (A[i] == 1) {
+                passing += zerosBefore;;
+            } else {
+                zerosBefore += 1;
+            }
+        }
+        return passing > Integer.MAX_VALUE ? -1 : passing;
+    }
+}
+```
