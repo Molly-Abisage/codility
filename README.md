@@ -150,7 +150,7 @@ public class Solution {
 CountDiv: Compute number of integers divisible by k in range [a..b]. (50% score)
 https://codility.com/demo/results/trainingF4QJ7X-DDW/
 
-``java
+```java
 class Solution {
     public int solution(int A, int B, int K) {
         return (B/K) - ((A - 1)/K);
