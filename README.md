@@ -159,7 +159,7 @@ class Solution {
 ```
 PassingCars
 Count the number of passing cars on the road.
-https://codility.com/demo/results/trainingQBRC5T-UWU/ (57%)
+https://codility.com/demo/results/trainingQBRC5T-UWU/ (70%)
 
 ```java
 class Solution {
