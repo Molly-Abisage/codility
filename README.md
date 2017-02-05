@@ -209,7 +209,7 @@ class Solution {
 
 MaxProductOfThree
 Maximize A[P] * A[Q] * A[R] for any triplet (P, Q, R). (44%)
-``java
+```java
 import java.util.*;
 
 class Solution {
@@ -252,4 +252,4 @@ class Solution {
     }
 }
 
-``
+```
