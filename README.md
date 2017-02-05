@@ -181,3 +181,28 @@ class Solution {
     }
 }
 ```
+Distinct
+Compute number of distinct values in an array. (100% score)
+``java
+import java.util.*;
+
+class Solution {
+    
+    public int solution(int[] A) {
+        if (A.length == 0) {
+            return 0;
+        }
+        Arrays.sort(A);
+        int distinct = 1;
+        
+        for (int i = 1; i < A.length; i ++) {
+            
+            if (A[i] != A[i - 1]) {
+                distinct ++;
+            }
+        }
+        return distinct;
+    }
+}
+
+```
