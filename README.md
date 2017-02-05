@@ -206,3 +206,18 @@ class Solution {
 }
 
 ```
+
+MaxProductOfThree
+Maximize A[P] * A[Q] * A[R] for any triplet (P, Q, R). (44%)
+``java
+import java.util.*;
+
+class Solution {
+    public int solution(int[] A) {
+        Arrays.sort(A);
+        int left = A[0] * A[1] * A[2];
+        int right = A[A.length - 1] * A[A.length - 2] * A[A.length - 3];
+        return left > right? left : right;
+    }
+}
+```
