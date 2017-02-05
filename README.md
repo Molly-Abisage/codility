@@ -205,7 +205,7 @@ class Solution {
     }
 }
 
-```
+``
 
 MaxProductOfThree
 Maximize A[P] * A[Q] * A[R] for any triplet (P, Q, R). (44%)
@@ -220,4 +220,36 @@ class Solution {
         return left > right? left : right;
     }
 }
-```
+``
+GenomicRangeQuery solution https://codility.com/demo/results/trainingVEBDN7-VCT/ (62% score)
+``java
+import java.util.*;
+class Solution {
+    public int[] solution(String S, int[] P, int[] Q) {
+        
+        Hashtable<String, Integer> factors = new Hashtable<>();
+        factors.put("A", 1);
+        factors.put("C", 2);
+        factors.put("G", 3);
+        factors.put("T", 4);
+        // int min = 0;
+        int[] ans = new int[P.length];
+        
+        for (int i = 0; i < P.length; i ++) {
+            String sub = S.substring(P[i], Q[i] + 1);
+            // System.out.println(sub);
+            int min = 10;
+            
+            for (String str : sub.split("")) {
+                
+                if (factors.get(str) < min) {
+                    min = factors.get(str);
+                }
+            }
+            ans[i] = min;
+        }
+        return ans;
+    }
+}
+
+``
