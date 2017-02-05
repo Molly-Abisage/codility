@@ -183,7 +183,7 @@ class Solution {
 ```
 Distinct
 Compute number of distinct values in an array. (100% score)
-``java
+```java
 import java.util.*;
 
 class Solution {
@@ -205,7 +205,7 @@ class Solution {
     }
 }
 
-``
+```
 
 MaxProductOfThree
 Maximize A[P] * A[Q] * A[R] for any triplet (P, Q, R). (44%)
@@ -220,9 +220,9 @@ class Solution {
         return left > right? left : right;
     }
 }
-``
+```
 GenomicRangeQuery solution https://codility.com/demo/results/trainingVEBDN7-VCT/ (62% score)
-``java
+```java
 import java.util.*;
 class Solution {
     public int[] solution(String S, int[] P, int[] Q) {
