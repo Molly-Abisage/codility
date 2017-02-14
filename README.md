@@ -67,28 +67,25 @@ Find the minimal positive integer not occurring in a given sequence.
 https://codility.com/demo/results/training25FBE5-M36/ Passed with 44%
 
 ```java
-import java.util.*;
+public class Solution {
 
-class Solution {
-    public int solution(int[] A) {
-        Arrays.sort(A);
-        if (A.length == 1) {
-            return 2;
-        }
-        List<Integer> ints = new ArrayList<>();
-        for (int i = 0; i < A.length; i ++) {
-            ints.add(A[i]);
-        }
-        if (ints.get(0) > 1) {
-            return 1;
-        }
-        for (int i = 1; i < ints.size(); i ++) {
-            if (ints.get(i) - ints.get(i - 1) > 1) {
-                return (ints.get(i) + ints.get(i - 1)) / 2;
-            }
-        }
-        return ints.get(ints.size() - 1) + 1;
-    }
+	public static void main(String[] args) {
+		int[] A = new int[]{2,3,1,5};
+		System.out.println(solution(A));
+	}
+	
+	public static int solution(int[] A) {
+		int[] counters = new int[A.length+2];
+		for (int i = 0; i < A.length; i++) {
+			counters[A[i]] = 1;
+		}
+		for (int i = 1; i < counters.length; i++) {
+			if (counters[i] == 0)
+				return i;
+		}
+		//no element is missing
+		return -1;
+	}
 }
 ```
 PermCheck
