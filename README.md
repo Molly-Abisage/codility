@@ -251,3 +251,56 @@ class Solution {
 
 ```
 https://codility.com/demo/results/trainingA8MF5W-7K5/
+
+// you can also use imports, for example:
+import java.util.*;
+
+// you can write to stdout for debugging purposes, e.g.
+// System.out.println("this is a debug message");
+
+https://codility.com/demo/results/training6XE7HV-TA3/ Passed with 86%
+```java
+class Solution {
+    
+    public int solution(String S) {
+        
+        Stack<String> stack = new Stack<>();
+        
+        for (String str : S.split("")) {
+            
+            if (isOpening(str)) {
+                stack.add(str);
+            } 
+            else {
+                
+                if (stack.isEmpty() || !getOpening(str).equals(stack.peek())) {
+                    return 0;
+                }
+                stack.pop();
+            }
+        }
+        return stack.isEmpty()? 1 : 0;
+    }
+    
+    private boolean isOpening(String s) {
+        
+         if (s.equals("(") || s.equals("{") || s.equals("[")) {
+             return true;
+         }
+         return false;
+    }
+    private String getOpening(String s) {
+        
+        if (s.equals(")")) {
+            return "(";
+        }
+        if (s.equals("}")) {
+            return "{";
+        }
+        if (s.equals("]")) {
+            return "[";
+        }
+        return "";
+    }
+}
+```
